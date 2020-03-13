@@ -1,0 +1,38 @@
+﻿@model LandisWebApp.Models.Meter
+
+@{
+    ViewData["Title"] = "Edit meter";
+}
+
+<h4>Meter @Model.Id</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cp" class="control-label"></label>
+                <input asp-for="Cp" class="form-control" />
+                <span asp-validation-for="Cp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCs" class="control-label"></label>
+                <input asp-for="IdCs" class="form-control" />
+                <span asp-validation-for="IdCs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrafoId" class="control-label"></label>
+                <input asp-for="TrafoId" class="form-control" />
+                <span asp-validation-for="TrafoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Landis" asp-action="Index">Back to List</a>
+</div>
+

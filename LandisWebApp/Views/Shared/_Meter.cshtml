@@ -1,0 +1,21 @@
+﻿@model LandisWebApp.Models.Meter
+
+<div class="meter">
+    <h1>Meter @Model.Id</h1>
+    <ul>
+        <li>
+            CP: @Model.Cp
+        </li>
+        <li>
+            CS: @Model.IdCs
+        </li>
+        <li>
+            Trafo: @Model.TrafoId
+        </li>
+    </ul>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+</div>
+<div>
+    <a asp-controller="Landis" asp-action="Index">Back to List</a>
+</div>
