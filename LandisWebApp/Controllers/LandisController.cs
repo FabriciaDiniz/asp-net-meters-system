@@ -21,14 +21,14 @@ namespace LandisWebApp.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            var meters = _db.Meters.ToArray();
+            var meters = _db.meters.ToArray();
             return View(meters);
         }
 
         [Route("{id:int}")]
         public IActionResult Details(int id)
         {
-            var meter = _db.Meters.FirstOrDefault(x => x.Id == id);
+            var meter = _db.meters.FirstOrDefault(x => x.Id == id);
             return View(meter);
         }
 
@@ -46,7 +46,7 @@ namespace LandisWebApp.Controllers
                 return View();
             }
 
-            _db.Meters.Add(meter);
+            _db.meters.Add(meter);
             _db.SaveChanges();
 
             //TODO: implementar lógica pro caso de dar erro na hora de salvar no banco
@@ -56,7 +56,7 @@ namespace LandisWebApp.Controllers
         [HttpGet, Route("edit/{id:int}")]
         public IActionResult Edit(int id)
         {
-            var meter = _db.Meters.FirstOrDefault(u => u.Id == id);
+            var meter = _db.meters.FirstOrDefault(u => u.Id == id);
             return View(meter);
         }
 
@@ -68,7 +68,7 @@ namespace LandisWebApp.Controllers
                 return View();
             }
 
-            _db.Meters.Update(newMeter);
+            _db.meters.Update(newMeter);
             _db.SaveChanges();
 
             //TODO: implementar lógica pro caso de dar erro na hora de salvar no banco
@@ -80,7 +80,7 @@ namespace LandisWebApp.Controllers
         public IActionResult Delete(int id)
         {
             var meter = _db.Meters.Find((long)id);
-            _db.Meters.Remove(meter);
+            _db.meters.Remove(meter);
             _db.SaveChanges();
 
             //TODO: implementar lógica pro caso de dar erro na hora de salvar no banco

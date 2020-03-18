@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LandisDesktopApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,20 @@ namespace LandisDesktopApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        PostgreSQL pgSql = new PostgreSQL();
+        public List<Meter> Meters { get; set; }
+
         public MainWindow()
-        {
+        {  
+            Meters = pgSql.GetAllMeters();
+            this.DataContext = this;
+
             InitializeComponent();
+        }
+
+        public void Meter_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Meter clicked");
         }
     }
 }

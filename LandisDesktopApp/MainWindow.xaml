@@ -7,16 +7,17 @@
         mc:Ignorable="d"
         Title="Landis" Height="450" Width="800">
 
-    <ListView
-        Margin="10" 
-        Name="meterLv">
+    <ListView ItemsSource="{Binding Meters}" PreviewMouseLeftButtonUp="Meter_Click">
         <ListView.View>
-            <GridView>
-                <GridViewColumn 
-                    Header="CP" 
-                    Width="50">
-                    
-                </GridViewColumn>
+            <GridView ColumnHeaderToolTip="Meter information">
+                <GridViewColumn DisplayMemberBinding="{Binding Id}"
+                                Header="Id" Width="50" />
+                <GridViewColumn DisplayMemberBinding="{Binding Cp}"
+                                Header="CP" Width="50" />
+                <GridViewColumn DisplayMemberBinding="{Binding IdCs}"
+                                Header="CS" Width="50" />
+                <GridViewColumn DisplayMemberBinding="{Binding TrafoId}"
+                                Header="Trafo" Width="50" />
             </GridView>
         </ListView.View>
     </ListView>

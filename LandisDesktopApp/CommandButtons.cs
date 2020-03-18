@@ -16,14 +16,14 @@ namespace LandisDesktopApp
             await CollectReadings();
         }
 
-        public async void powerOnBtn_Click(object sender, RoutedEventArgs e)
+        public void powerOnBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        public async void powerOffBtn_Click(object sender, RoutedEventArgs e)
+        public void powerOffBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
         private Task CollectReadings()
