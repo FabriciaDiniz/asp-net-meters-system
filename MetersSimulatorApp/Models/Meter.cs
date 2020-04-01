@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LandisSimulatorApp.Models
+namespace MetersSimulatorApp.Models
 {
     class Meter
     {

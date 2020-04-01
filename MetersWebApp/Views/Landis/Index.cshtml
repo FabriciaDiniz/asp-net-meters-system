@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LandisWebApp.Models.Meter>
+﻿@model IEnumerable<MetersWebApp.Models.Meter>
 
 <h1>Meters List</h1>
 
@@ -24,7 +24,7 @@
         {
             <tr>
                 <td>
-                    <a asp-area="" asp-controller="Landis" asp-action="Details" asp-route-id="@item.Id">
+                    <a asp-area="" asp-controller="Meters" asp-action="Details" asp-route-id="@item.Id">
                         @Html.DisplayFor(modelItem => item.IdCp)
                     </a>
                 <td>

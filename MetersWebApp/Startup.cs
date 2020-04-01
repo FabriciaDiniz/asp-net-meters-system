@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using LandisWebApp.Data;
+using MetersWebApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using LandisWebApp.Hubs;
+using MetersWebApp.Hubs;
 
-namespace LandisWebApp
+namespace MetersWebApp
 {
     public class Startup
     {
@@ -32,11 +32,6 @@ namespace LandisWebApp
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseNpgsql(
                         Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddEntityFrameworkNpgsql()
-                .AddDbContext<LandisDbContext>(options =>
-                    options.UseNpgsql(
-                        Configuration.GetConnectionString("LandisConnection")));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();

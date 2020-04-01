@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using LandisWebApp.Models;
+using MetersWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace LandisWebApp.Controllers
+namespace MetersWebApp.Controllers
 {
     public class HomeController : Controller
     {

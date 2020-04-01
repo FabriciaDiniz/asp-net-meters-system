@@ -5,9 +5,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Windows;
-using LandisSimulatorApp.Models;
+using MetersSimulatorApp.Models;
 
-namespace LandisSimulatorApp
+namespace MetersSimulatorApp
 {
     class Server
     {

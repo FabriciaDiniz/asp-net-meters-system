@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LandisWebApp.Models
+namespace MetersWebApp.Models
 {
-    [Table("meters")]
     public class Meter
     {
         [Key]

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using LandisWebApp.Hubs;
+using MetersWebApp.Hubs;
 
-namespace ProjetoLandisWeb.Controllers
+namespace MetersWebApp.Controllers
 {
     [Route("testhub/[controller]")]
     [ApiController]

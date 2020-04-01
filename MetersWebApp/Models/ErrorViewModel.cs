@@ -1,6 +1,6 @@
 using System;
 
-namespace LandisWebApp.Models
+namespace MetersWebApp.Models
 {
     public class ErrorViewModel
     {

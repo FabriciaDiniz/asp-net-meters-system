@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace LandisWebApp.Data
+namespace MetersWebApp.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
